@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex">
+        <title>New post | devrince.org</title>
+        <link rel="icon" href="logo.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+         
+        <header>
+            <a class="brand" href="index.html">
+                <img src="logo.svg" alt="devrince logo" class="logo-img">
+                <span>devrince.org</span>
+            </a>
+        </header>
+
+        <main>
+            <h2>New post</h2>
+            <p class="note">
+                Create a new blog post.
+                only the owner of the website can publish a new post.
+            </p>
+
+            <form id="post-form" class="admin-form">
+                <label>Title
+                    <input id="title" required>
+                </label>
+                <label>Date
+                    <input type="date" id="date" required>
+                </label>
+                <label>post text (leave a blank line between paragrapghs)
+                    <textarea id="body" rows="10" required></textarea>
+                </label>
+<button class="btn" type="submit">Make post</button>
+            </form>
+
+            <div class="admin-output">
+                <label>Code to paste into posts.js
+                    <textarea id="output" rows="12" readonly></textarea>
+                </label>
+                <button class="btn" id="copy" type="button">Copy code</button>
+            </div>
+        </main>
+
+        <footer>&copy; 2026 devrince.org.</footer>
+        
+        <script src="script.js"></script>
+
+    </body>
+</html>
