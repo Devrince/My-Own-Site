@@ -11,12 +11,17 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
   color: var(--ink);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+
+  /* Background: light base color with faint book, laptop and code icons */
+  background-color: var(--bg);
+  background-image: url("pattern.svg");
+  background-repeat: repeat;
+  background-size: 300px 300px;
 }
 
 /* ===== Top bar ===== */
@@ -28,6 +33,7 @@ header {
   gap: 12px;
   padding: 14px 28px;
   border-bottom: 3px solid var(--ink);
+  background: var(--bg);   /* solid, so the pattern doesn't sit behind the menu */
 }
 
 .brand {
@@ -226,6 +232,7 @@ footer {
   padding: 24px;
   font-size: 0.9rem;
   border-top: 3px solid var(--ink);
+  background: var(--bg);   /* solid, so the pattern doesn't sit behind the footer text */
 }
 
 /* ===== Phones ===== */
