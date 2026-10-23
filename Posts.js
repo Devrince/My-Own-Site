@@ -1,5 +1,5 @@
 // ===== BLOG POSTS =====
-// To add a post: open the site with #admin at the end of the address,
+// To add a post: open the site with admin.html at the end of the address,
 // fill in the form, copy the code, and paste it into the list below.
 // Dates are YYYY-MM-DD. Leave a blank line (\n\n) between paragraphs.
 // Newest posts show first automatically.

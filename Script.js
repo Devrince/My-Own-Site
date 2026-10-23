@@ -24,7 +24,7 @@ if (postList && typeof posts !== "undefined") {
 
         post.body.split("\n\n").forEach(text => {
             const p = document.createElement("p");
-            p.textcontent = text;
+            p.textContent = text;
             article.append(p);
         });
 
@@ -34,21 +34,21 @@ if (postList && typeof posts !== "undefined") {
 }
 
 // ========Admin page========
-const form = document.getElementById("post-form");
-const output = document.getElementById("output");
-const copyBtn = document.getElementById("copy");
+const form = document. getElementById("post-form");
+const output = document. getElementById("output");
+const copyBtn = document. getElementById("copy");
 
 if (form) {
-    form.addEventlistener("submit" , event => {
+    form.addEventListener("submit" , event => {
         event.preventDefault();
-         const title = document. getElementById("title").valuetrim();
-         const day = document.getElementById("date").value;
-         const body = document.getElementById("body").valuetrim();
+         const title = document. getElementById("title").value.trim();
+         const date = document. getElementById("date").value;
+         const body = document. getElementById("body").value.trim();
 
          output.value = 
          " {\n" +
          "    title: " + JSON.stringify(title) + ",\n" +
-         "     date: \" "+ date + "\",\n"  +
+         "     date: \""+ date + "\",\n"  +
          "     body:  " + JSON.stringify(body) + "\n" +
          " },";
 
