@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | devrince.org</title>
-<link rel="icon" href="logo.png" type="image/png+xml">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <a class="brand" href="index.html">
-            <img src="logo.png" alt="devrince logo" class="logo-img">
-            <span>devrince.org</span>
-        </a>
-        <nav>
-           <a href="index.html">Blog</a>
-           <a href="socials.html">Socials</a>
-           <a href="projects.html" class="active">Projects</a>
-           <a href="about.html">About</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Projects</h2>
-        <a class="card project" href="https://github.com/Devrince/Personal-OS" target="_blank" rel="noopener ">
-         <div>
-            <strong>Personal-OS</strong>
-            <span>My own Personal-OS that runs on web. simple for now, and I plan to grow it over time as I grow and learn the skills with time.</sapn> 
-         </div>
-         </a>
-         </main>
-    <footer>&copy; 2026 devrince.org</footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A look at the projects Prince Joshi is building and learning from.">
+        <meta name="theme-color" content="#080b18">
+        <title>Projects — Devrince</title>
+        <link rel="icon" href="logo.png" type="image/png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <a class="brand" href="index.html" aria-label="Devrince home">
+                <img src="logo.png" alt="" class="logo-img">
+                <span>devrince<span class="brand-dot">.</span>org</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="index.html#blog">Blog</a>
+                <a href="socials.html">Socials</a>
+                <a href="projects.html" class="active" aria-current="page">Projects</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <div class="page-heading">
+                <p class="eyebrow">Things I’ve been making</p>
+                <h1 class="page-title">Projects<span class="brand-dot">.</span></h1>
+                <p>Small experiments and ideas that help me learn by doing.</p>
+            </div>
+            <div class="cards">
+                <a class="card project-card" href="https://github.com/Devrince/Personal-OS" target="_blank" rel="noopener noreferrer">
+                    <span class="project-mark" aria-hidden="true">⌘</span>
+                    <div>
+                        <strong>Personal-OS</strong>
+                        <span class="project-description">A small personal operating-system-inspired space that runs in the browser. It’s my first project, and I plan to keep improving it as I learn.</span>
+                        <span class="project-link">View the repository <span aria-hidden="true">↗</span></span>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <a class="footer-brand" href="index.html">devrince.org <span class="brand-dot">✦</span></a>
+            <p>Made with curiosity by Prince Joshi · © 2026</p>
+            <a class="back-to-top" href="#">Back to top ↑</a>
+        </footer>
+    </body>
 </html>

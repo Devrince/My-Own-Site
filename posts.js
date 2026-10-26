@@ -1,6 +1,6 @@
 // ===== BLOG POSTS =====
-// To add a post: open the site with admin.html at the end of the address,
-// fill in the form, copy the code, and paste it into the list below.
+// To add a post: open admin.html, fill in the form, and paste the copied
+// entry into this list.
 // Dates are YYYY-MM-DD. Leave a blank line (\n\n) between paragraphs.
 // Newest posts show first automatically.
 
@@ -8,7 +8,11 @@ const posts = [
   {
     title: "My Personal OS on the Web",
     date: "2026-10-05",
-    body: "My first real project is a personal OS that runs in the browser. It is simple right now and has very few features, and that is okay.\n\nI built it to understand how the pieces of an operating system fit together. Every small feature teaches me something new about HTML, CSS and JavaScript.\n\nI plan to upgrade it step by step. The goal is to keep learning by building it.\n\nYou can see the code here: https://github.com/Devrince/Personal-OS"
+    body: "My first real project is a personal OS that runs in the browser. It is simple right now and has very few features, and that is okay.\n\nI built it to understand how the pieces of an operating system fit together. Every small feature teaches me something new about HTML, CSS and JavaScript.\n\nI plan to upgrade it step by step. The goal is to keep learning by building it.",
+    link: {
+      url: "https://github.com/Devrince/Personal-OS",
+      label: "View the Personal-OS repository"
+    }
   },
   {
     title: "Why I Built This Site",

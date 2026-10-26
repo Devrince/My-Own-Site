@@ -1,5 +1,3 @@
-// =======Blog Page==========
-
 const postList = document.getElementById("post-list");
 
 if (postList && typeof posts !== "undefined") {
@@ -28,41 +26,55 @@ if (postList && typeof posts !== "undefined") {
             article.append(p);
         });
 
+        if (post.link) {
+            const link = document.createElement("a");
+            link.href = post.link.url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = post.link.label;
+            article.append(link);
+        }
+
         postList.append(article);
     });
-
 }
 
-// ========Admin page========
-const form = document. getElementById("post-form");
-const output = document. getElementById("output");
-const copyBtn = document. getElementById("copy");
+const form = document.getElementById("post-form");
+const output = document.getElementById("output");
+const copyBtn = document.getElementById("copy");
+const formStatus = document.getElementById("form-status");
 
 if (form) {
-    form.addEventListener("submit" , event => {
+    form.addEventListener("submit", event => {
         event.preventDefault();
-         const title = document. getElementById("title").value.trim();
-         const date = document. getElementById("date").value;
-         const body = document. getElementById("body").value.trim();
+        const title = document.getElementById("title").value.trim();
+        const date = document.getElementById("date").value;
+        const body = document.getElementById("body").value.trim();
 
-         output.value = 
-         " {\n" +
-         "    title: " + JSON.stringify(title) + ",\n" +
-         "     date: \""+ date + "\",\n"  +
-         "     body:  " + JSON.stringify(body) + "\n" +
-         " },";
+        output.value = [
+            "  {",
+            `    title: ${JSON.stringify(title)},`,
+            `    date: ${JSON.stringify(date)},`,
+            `    body: ${JSON.stringify(body)}`,
+            "  },"
+        ].join("\n");
+        formStatus.textContent = "Post entry ready. Copy it into posts.js to publish.";
+    });
 
-});
+    copyBtn.addEventListener("click", async () => {
+        if (!output.value) {
+            formStatus.textContent = "Create a post entry before copying.";
+            return;
+        }
 
-copyBtn.addEventListener("click", async () => {
-    if (!output.value) return;
-
-    await navigator.clipboard.writeText(output.value);
-    copyBtn.textContent = "Copied";
-    setTimeout(() => (copyBtn.textContent = "Copy code"), 1500);
-});
+        try {
+            await navigator.clipboard.writeText(output.value);
+            formStatus.textContent = "Copied. Paste the entry into posts.js.";
+        } catch {
+            formStatus.textContent = "Clipboard access is unavailable. Select the code and copy it manually.";
+        }
+    });
 }
-
 
 
 
