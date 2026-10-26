@@ -1,23 +1,10 @@
-# Devrince.org
+# Prince's Website
 
-A small personal website for Prince Joshi, built with plain HTML, CSS, and JavaScript. The space-inspired look, responsive pages, and original smiling-face mark keep it lightweight and easy to edit.
+This is a small personal website made with HTML and CSS.
 
-## Pages
+- Change the page in `index.html`.
+- Change the background and navigation colors in `styles.css`.
+- Open `index.html` in a browser to see the site.
 
-- `index.html` — introduction and blog
-- `socials.html` — Instagram, GitHub, and LinkedIn
-- `projects.html` — Personal-OS
-- `about.html` — a little about me
-- `admin.html` — helper that formats a blog post entry
+To publish it, turn on GitHub Pages in the repository settings and choose the `main` branch.
 
-## Add a blog post
-
-1. Open `admin.html` in your browser and fill in the form.
-2. Copy the generated entry into the `posts` list in `posts.js`.
-3. Save the changes and publish the updated site.
-
-The site is static, so the helper does not publish posts or provide authentication. Do not put private information in it.
-
-## Publish with GitHub Pages
-
-Push the project to GitHub, then enable GitHub Pages for the repository in its **Settings → Pages**. Use the published Pages address to view the site.
